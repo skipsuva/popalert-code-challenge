@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Walsheim Oblique";
+  src: url("/vendor/assets/fonts/gt-walsheim-regular-oblique-web.woff");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Walsheim";
+  src: url("/vendor/assets/fonts/gt-walsheim-web.woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+$content-spacing: 16px;
+
+$light-grey: rgb(233, 237, 238);
+$light-grey-selected: rgb(247, 248, 249);
+$light-grey-outline: rgb(221, 222, 223);
+$dark-grey: rgb(32, 33, 34);
+$yellow: rgb(252, 230, 141);
+$bone-white: rgb(254, 255, 255);
+
+
+body {
+  background-color: $light-grey;
+  margin: 0;
+  padding: 0;
+}
+
+// Header
+.header-content{
+  background-color: $dark-grey;
+  width: 100%;
+
+  .header-title-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    overflow: auto;
+  }
+
+  .heading-title {
+    line-height: 1.25;
+    color: $bone-white;
+    font-family: "Walsheim";
+    margin: 0;
+    // float: cen;
+    padding-top: $content-spacing;
+    padding-bottom: $content-spacing;
+  }
+
+  .header-menu-svg {
+    float: right;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    margin-top: -($content-spacing * 3);
+    padding-right: $content-spacing
+  }
+}
+
+
+// Body
+.body-content {
+  width: 100%;
+  height: 100%;
+  margin-top: $content-spacing;
+
+  // Search Input
+  .search-input-container {
+    margin-top: ($content-spacing * 2);
+    background-color: $bone-white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1px;
+    overflow: auto;
+
+    .input {
+      outline: none;
+      border: 1px solid $bone-white;
+      border-radius: 4px;
+      padding: $content-spacing;
+      width: 80%;
+      font-size: small;
+    }
+
+    .search-svg {
+      // padding-right: $content-spacing;
+      display: inline-block;
+      position: relative;
+      white-space: nowrap;
+    }
+  }
+
+  // Alert List
+  .alert-list-container {
+    margin-top: ($content-spacing * 2);
+    background-color: $bone-white;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1px;
+
+    .alert-toggle-container {
+      text-align: center;
+      margin-top: $content-spacing;
+      padding-top: $content-spacing;
+
+
+      .alert-toggle-button-left {
+        cursor: pointer;
+        border-radius: 5px 0px 0px 5px;
+        padding: 8px 20px;
+        background-color: $bone-white;
+        color: $dark-grey;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        white-space: nowrap;
+        font-size: x-small;
+        border: 1px solid $light-grey-outline;
+
+        &:hover {
+          color: $dark-grey;
+          background-color: lighten($light-grey, 5%);
+        }
+      }
+
+      .alert-toggle-button-right {
+        cursor: pointer;
+        border-radius: 0px 5px 5px 0px;
+        padding: 8px 20px;
+        background-color: $light-grey-selected;
+        color: black;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        white-space: nowrap;
+        font-size: x-small;
+        border: 1px solid $light-grey-outline;
+
+        &:hover {
+          // color: blue;
+          // background-color: black;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    // Alert List Item
+    .alert-list-item-container {
+      border-top: 1px solid $light-grey;
+      padding: $content-spacing;
+      overflow: auto;
+
+      .alert-item-heading {
+        float: left;
+        margin: 0;
+      }
+
+      .alert-item-button {
+        float: right;
+        cursor: pointer;
+        border-radius: 9999px;
+        padding: 8px 20px;
+        background-color: $light-grey;
+        color: $dark-grey;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        white-space: nowrap;
+        font-family: "Walsheim";
+        font-size: x-small;
+
+        &:hover {
+          color: $dark-grey;
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}
