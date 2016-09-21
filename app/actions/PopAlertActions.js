@@ -5,7 +5,10 @@ class PopAlertActions {
   // updateSomething(test) {
   //   return something;
   // }
+  editAlertItem(){
+    return true;
+  }
 
 }
 
-module.exports = alt.createActions(new PopAlertActions());
+module.exports = alt.createActions(PopAlertActions);

@@ -5,9 +5,11 @@ var PopAlertSource = require('../sources/PopAlertSource');
 class PopAlertStore {
   constructor(){
     // set initial state
+    // this.
 
     this.bindListeners({
       // handleFetchListItems: PopAlertActions.fetchListItems,
+      handleEditAlertItem: PopAlertActions.editAlertItem
 
     });
   }
@@ -15,7 +17,9 @@ class PopAlertStore {
   // handleFetchListItems(){
     // change state
   // }
-
+  handleEditAlertItem() {
+    debugger;
+  }
 }
 
 module.exports = alt.createStore(PopAlertStore, 'PopAlertStore');

@@ -1,7 +1,14 @@
 var React = require('react');
 var AlertListItem = require('./AlertListItem.js');
+var PopAlertActions = require('../actions/PopAlertActions');
 
 var AlertList = React.createClass({
+
+  handleEditClick() {
+    // need to get reference to item id...
+    debugger;
+    PopAlertActions.editAlertItem();
+  },
 
   render() {
     return(
@@ -13,7 +20,10 @@ var AlertList = React.createClass({
         <ul>
           <li>
             <div className="alert-list-item-container">
-              <AlertListItem />
+              <AlertListItem
+                onEditClick={this.handleEditClick}
+
+              />
             </div>
           </li>
           <li>
