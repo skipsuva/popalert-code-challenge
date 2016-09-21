@@ -3,11 +3,12 @@ var React = require('react');
 var AlertListItem = React.createClass({
 
   onEditClick() {
-    this.props.onEditClick(this.props.itemId);
+    this.props.onEditClick(this.props);
   },
 
   render() {
-    var buttonText = this.props.beingEdited ? "REMOVE" : "EDIT";
+    var buttonText = this.props.beingEdited ? "CANCEL" : "EDIT";
+
     return(
       <li>
         <div className="alert-list-item-container">

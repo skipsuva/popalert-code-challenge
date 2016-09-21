@@ -7,12 +7,17 @@ class PopAlertStore {
     this.alertItems = PopAlertSource.fetchListItems();
 
     this.bindListeners({
-      handleEditAlertItem: PopAlertActions.editAlertItem
+      handleEditAlertItem: PopAlertActions.editAlertItem,
+      handleCancelEditAlertItem: PopAlertActions.cancelEditAlertItem,
     });
   }
 
   handleEditAlertItem(itemId) {
     this.alertItems[itemId - 1].beingEdited = true;
+  }
+
+  handleCancelEditAlertItem(itemId) {
+    this.alertItems[itemId - 1].beingEdited = false;
   }
 }
 

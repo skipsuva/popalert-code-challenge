@@ -4,8 +4,12 @@ var PopAlertActions = require('../actions/PopAlertActions');
 
 var AlertList = React.createClass({
 
-  handleEditClick(itemId) {
-    PopAlertActions.editAlertItem(itemId);
+  handleEditClick(itemProps) {
+    if(itemProps.beingEdited){
+      PopAlertActions.cancelEditAlertItem(itemProps.itemId);
+    } else {
+      PopAlertActions.editAlertItem(itemProps.itemId);
+    }
   },
 
   render() {
