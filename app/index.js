@@ -8,16 +8,14 @@ var PopAlertBody    = require('./components/PopAlertBody.js');
 
 
 var PopAlertParent = React.createClass({
-  render: function () {
+  render () {
     return (
-
         <div>
           <AltContainer stores={{PopAlertStore}}>
             <PopAlertHeader />
             <PopAlertBody />
           </AltContainer>
         </div>
-
     );
   }
 });

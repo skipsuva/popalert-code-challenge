@@ -1,18 +1,19 @@
-var seedAlerts = [
-  { name: "Jay Z" },
-  { name: "Beyonce" },
-  { name: "Kanye West" },
-  { name: "Lebron James" },
-  { name: "Elon Musk" },
-  { name: "Skip Suva" },
-  { name: "Presidential Race" },
-  { name: "Danny Brown" }
+var testData = [
+  { id: 1, name: "Jay Z", beingEdited: false},
+  { id: 2, name: "Beyonce", beingEdited: false},
+  { id: 3, name: "Kanye West", beingEdited: false},
+  { id: 4, name: "Lebron James", beingEdited: false},
+  { id: 5, name: "New York Yankees", beingEdited: false},
+  { id: 6, name: "Steve Spurgat", beingEdited: false},
+  { id: 7, name: "Flipboard", beingEdited: false},
+  { id: 8, name: "Syria", beingEdited: false},
+  { id: 9, name: "Barack Obama", beingEdited: false}
 ];
 
 
 var PopAlertSource = {
-  fetchMenuItems: function() {
-    return seedAlerts;
+  fetchListItems: function() {
+    return testData;
   }
 };
 

@@ -2,13 +2,10 @@ var alt = require('../alt');
 var PopAlertSource = require('../sources/PopAlertSource');
 
 class PopAlertActions {
-  // updateSomething(test) {
-  //   return something;
-  // }
-  editAlertItem(){
-    return true;
-  }
 
+  editAlertItem(itemId){
+    return itemId;
+  }
 }
 
 module.exports = alt.createActions(PopAlertActions);

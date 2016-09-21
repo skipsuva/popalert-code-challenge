@@ -3,17 +3,20 @@ var React = require('react');
 var AlertListItem = React.createClass({
 
   onEditClick() {
-    this.props.onEditClick();
+    this.props.onEditClick(this.props.itemId);
   },
 
   render() {
+    var buttonText = this.props.beingEdited ? "REMOVE" : "EDIT";
     return(
-      <div className="">
-        <p className="alert-item-heading"> Alert List Item Component </p>
-        <div className="alert-item-button" onClick={this.onEditClick}>
-          EDIT
+      <li>
+        <div className="alert-list-item-container">
+          <p className="alert-item-heading"> {this.props.itemName} </p>
+          <div className="alert-item-button" onClick={this.onEditClick}>
+            {buttonText}
+          </div>
         </div>
-      </div>
+      </li>
     );
   }
 });

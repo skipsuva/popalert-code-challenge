@@ -4,21 +4,15 @@ var PopAlertSource = require('../sources/PopAlertSource');
 
 class PopAlertStore {
   constructor(){
-    // set initial state
-    // this.
+    this.alertItems = PopAlertSource.fetchListItems();
 
     this.bindListeners({
-      // handleFetchListItems: PopAlertActions.fetchListItems,
       handleEditAlertItem: PopAlertActions.editAlertItem
-
     });
   }
 
-  // handleFetchListItems(){
-    // change state
-  // }
-  handleEditAlertItem() {
-    debugger;
+  handleEditAlertItem(itemId) {
+    this.alertItems[itemId - 1].beingEdited = true;
   }
 }
 

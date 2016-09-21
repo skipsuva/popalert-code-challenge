@@ -4,10 +4,8 @@ var PopAlertActions = require('../actions/PopAlertActions');
 
 var AlertList = React.createClass({
 
-  handleEditClick() {
-    // need to get reference to item id...
-    debugger;
-    PopAlertActions.editAlertItem();
+  handleEditClick(itemId) {
+    PopAlertActions.editAlertItem(itemId);
   },
 
   render() {
@@ -18,24 +16,14 @@ var AlertList = React.createClass({
           <div className="alert-toggle-button-right"> Your Alerts </div>
         </div>
         <ul>
-          <li>
-            <div className="alert-list-item-container">
-              <AlertListItem
-                onEditClick={this.handleEditClick}
-
-              />
-            </div>
-          </li>
-          <li>
-            <div className="alert-list-item-container">
-              <AlertListItem />
-            </div>
-          </li>
-          <li>
-            <div className="alert-list-item-container">
-              <AlertListItem />
-            </div>
-          </li>
+          {this.props.alertItems.map(function(item) {
+            return <AlertListItem
+              key={item.id}
+              itemId={item.id}
+              itemName={item.name}
+              beingEdited={item.beingEdited}
+              onEditClick={this.handleEditClick} />;
+          }.bind(this))}
         </ul>
       </div>
     );

@@ -12,7 +12,9 @@ var PopAlertBody = React.createClass({
           <SearchInput />
         </div>
         <div className="alert-list-container">
-          <AlertList />
+          <AlertList
+            alertItems={this.props.PopAlertStore.alertItems}
+          />
         </div>
       </div>
     );
