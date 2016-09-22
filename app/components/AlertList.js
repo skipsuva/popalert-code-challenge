@@ -6,10 +6,18 @@ var PopAlertActions = require('../actions/PopAlertActions');
 var AlertList = React.createClass({
 
   handleEditClick(itemProps) {
-    if(itemProps.beingEdited){
-      PopAlertActions.cancelEditAlertItem(itemProps.itemId);
-    } else {
-      PopAlertActions.editAlertItem(itemProps.itemId);
+    if(this.props.toggleSelected === "all"){
+      if(itemProps.inPersonalAlerts){
+        PopAlertActions.removeItem(itemProps.itemId);
+      } else {
+        PopAlertActions.addItem(itemProps.itemId);
+      }
+    }else if(this.props.toggleSelected === "personal") {
+      if(itemProps.beingEdited){
+        PopAlertActions.removeItem(itemProps.itemId);
+      } else {
+        PopAlertActions.editAlertItem(itemProps.itemId);
+      }
     }
   },
 
@@ -34,7 +42,9 @@ var AlertList = React.createClass({
               key={item.id}
               itemId={item.id}
               itemName={item.name}
+              inPersonalAlerts={item.inPersonalAlerts}
               beingEdited={item.beingEdited}
+              toggleSelected={this.props.toggleSelected}
               onEditClick={this.handleEditClick} />;
           }.bind(this))}
         </ul>

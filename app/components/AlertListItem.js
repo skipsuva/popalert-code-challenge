@@ -6,8 +6,16 @@ var AlertListItem = React.createClass({
     this.props.onEditClick(this.props);
   },
 
+  getButtonText() {
+    if(this.props.toggleSelected === "all"){
+      return this.props.inPersonalAlerts ? "REMOVE" : "ADD";
+    }else if(this.props.toggleSelected === "personal") {
+      return this.props.beingEdited ? "REMOVE" : "EDIT";
+    }
+  },
+
   render() {
-    var buttonText = this.props.beingEdited ? "CANCEL" : "EDIT";
+    var buttonText = this.getButtonText();
 
     return(
       <li>

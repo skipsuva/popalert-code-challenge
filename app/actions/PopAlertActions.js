@@ -3,6 +3,14 @@ var PopAlertSource = require('../sources/PopAlertSource');
 
 class PopAlertActions {
 
+  addItem(itemId) {
+    return itemId;
+  }
+
+  removeItem(itemId) {
+    return itemId;
+  }
+
   editAlertItem(itemId) {
     return itemId;
   }
