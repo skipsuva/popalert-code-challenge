@@ -174,9 +174,10 @@ body {
           background-color: lighten($light-grey, 5%);
         }
 
-        // .selected {
-        //   background-color: $dark-grey;
-        // }
+      }
+
+      .alert-toggle-button.selected {
+        background-color: $light-grey-selected;
       }
 
       .alert-toggle-button + .alert-toggle-button {

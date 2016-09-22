@@ -14,6 +14,7 @@ var PopAlertBody = React.createClass({
         <div className="alert-list-container">
           <AlertList
             alertItems={this.props.PopAlertStore.alertItems}
+            toggleSelected={this.props.PopAlertStore.toggleSelected}
           />
         </div>
       </div>
