@@ -18,6 +18,7 @@ $light-grey: rgb(233, 237, 238);
 $light-grey-selected: rgb(247, 248, 249);
 $light-grey-outline: rgb(221, 222, 223);
 $dark-grey: rgb(32, 33, 34);
+$dark-grey-outline: rgb(42, 43, 44);
 $yellow: rgb(252, 230, 141);
 $bone-white: rgb(254, 255, 255);
 
@@ -56,7 +57,55 @@ body {
     position: relative;
     white-space: nowrap;
     margin-top: -($content-spacing * 3);
-    padding-right: $content-spacing
+    padding-right: $content-spacing;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.08);
+    }
+  }
+
+  .menu-container {
+    color: $bone-white;
+    background: $dark-grey;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: right;
+    position: absolute;
+    margin: 0;
+    top: 78px;
+    right: 30px;
+    width: 150px;
+    z-index: 99999;
+    border-radius: 2px;
+    font-size: x-small;
+
+    .menu-item {
+      padding: ($content-spacing/2) $content-spacing;
+
+      &:hover {
+        color: $dark-grey;
+        background-color: $yellow;
+        cursor: pointer;
+      }
+    }
+
+    .menu-item + .menu-item {
+      border-top: 1px solid $dark-grey-outline;
+    }
+  }
+
+  .menu-container:before {
+    content:"";
+    position: absolute;
+    right: 24px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $dark-grey transparent;
+    z-index:9999;
   }
 }
 
@@ -160,6 +209,7 @@ body {
       .alert-item-heading {
         float: left;
         margin: 0;
+        padding-top: 5px;
       }
 
       .alert-item-button {

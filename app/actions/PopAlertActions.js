@@ -10,6 +10,14 @@ class PopAlertActions {
   cancelEditAlertItem(itemId) {
     return itemId;
   }
+
+  openMenu() {
+    return true;
+  }
+
+  closeMenu() {
+    return true;
+  }
 }
 
 module.exports = alt.createActions(PopAlertActions);
