@@ -18,6 +18,14 @@ class PopAlertActions {
   closeMenu() {
     return true;
   }
+
+  showPopularAlerts() {
+    return true;
+  }
+
+  showPersonalAlerts() {
+    return true;
+  }
 }
 
 module.exports = alt.createActions(PopAlertActions);

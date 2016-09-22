@@ -4,14 +4,17 @@ var PopAlertSource = require('../sources/PopAlertSource');
 
 class PopAlertStore {
   constructor(){
-    this.alertItems = PopAlertSource.fetchListItems();
+    this.alertItems = PopAlertSource.fetchAllItems();
     this.menuIsOpen = false;
+    this.toggleSelected = "all";
 
     this.bindListeners({
       handleEditAlertItem: PopAlertActions.editAlertItem,
       handleCancelEditAlertItem: PopAlertActions.cancelEditAlertItem,
       handleOpenMenu: PopAlertActions.openMenu,
-      handleCloseMenu: PopAlertActions.closeMenu
+      handleCloseMenu: PopAlertActions.closeMenu,
+      handleShowPopularAlerts: PopAlertActions.showPopularAlerts,
+      handleShowPersonalAlerts: PopAlertActions.showPersonalAlerts
     });
   }
 
@@ -29,6 +32,16 @@ class PopAlertStore {
 
   handleCloseMenu() {
     this.menuIsOpen = false;
+  }
+
+  handleShowPopularAlerts() {
+    this.toggleSelected = "all";
+    this.alertItems = PopAlertSource.fetchAllItems();
+  }
+
+  handleShowPersonalAlerts() {
+    this.toggleSelected = "personal";
+    this.alertItems = PopAlertSource.fetchPersonalItems();
   }
 }
 

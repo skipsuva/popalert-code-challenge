@@ -1,5 +1,6 @@
 var React = require('react');
 var AlertListItem = require('./AlertListItem.js');
+var AlertToggle = require('./AlertToggle.js');
 var PopAlertActions = require('../actions/PopAlertActions');
 
 var AlertList = React.createClass({
@@ -12,13 +13,21 @@ var AlertList = React.createClass({
     }
   },
 
+  handlePopularToggleClick(){
+    PopAlertActions.showPopularAlerts();
+  },
+
+  handlePersonalToggleClick(){
+    PopAlertActions.showPersonalAlerts();
+  },
+
   render() {
     return(
       <div>
-        <div className="alert-toggle-container">
-          <div className="alert-toggle-button-left"> Popular Alerts </div>
-          <div className="alert-toggle-button-right"> Your Alerts </div>
-        </div>
+        <AlertToggle
+          toggleSelected={this.props.toggleSelected}
+          onPopularToggleClick={this.handlePopularToggleClick}
+          onPersonalToggleClick={this.handlePersonalToggleClick} />
         <ul>
           {this.props.alertItems.map(function(item) {
             return <AlertListItem

@@ -156,9 +156,9 @@ body {
       padding-top: $content-spacing;
 
 
-      .alert-toggle-button-left {
-        cursor: pointer;
+      .alert-toggle-button {
         border-radius: 5px 0px 0px 5px;
+        cursor: pointer;
         padding: 8px 20px;
         background-color: $bone-white;
         color: $dark-grey;
@@ -173,25 +173,14 @@ body {
           color: $dark-grey;
           background-color: lighten($light-grey, 5%);
         }
+
+        // .selected {
+        //   background-color: $dark-grey;
+        // }
       }
 
-      .alert-toggle-button-right {
-        cursor: pointer;
+      .alert-toggle-button + .alert-toggle-button {
         border-radius: 0px 5px 5px 0px;
-        padding: 8px 20px;
-        background-color: $light-grey-selected;
-        color: black;
-        text-decoration: none;
-        display: inline-block;
-        position: relative;
-        white-space: nowrap;
-        font-size: x-small;
-        border: 1px solid $light-grey-outline;
-
-        &:hover {
-          // color: blue;
-          // background-color: black;
-        }
       }
     }
 
