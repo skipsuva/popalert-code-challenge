@@ -11,9 +11,9 @@ var AlertListItem = React.createClass({
 
     return(
       <li>
-        <div className="alert-list-item-container">
+        <div className="alert-list-item-container"onClick={this.onEditClick}>
           <div className="alert-item-heading"> {this.props.itemName} </div>
-          <div className="alert-item-button" onClick={this.onEditClick}>
+          <div className="alert-item-button">
             {buttonText}
           </div>
         </div>

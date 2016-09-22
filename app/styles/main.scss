@@ -74,7 +74,7 @@ body {
     position: absolute;
     margin: 0;
     top: 78px;
-    right: 30px;
+    right: 5%;
     width: 150px;
     z-index: 99999;
     border-radius: 2px;
@@ -205,6 +205,16 @@ body {
       border-top: 1px solid $light-grey;
       padding: $content-spacing;
       overflow: auto;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light-grey-selected;
+      }
+
+      &:hover .alert-item-button {
+        color: $dark-grey;
+        background-color: $yellow;
+      }
 
       .alert-item-heading {
         float: left;
