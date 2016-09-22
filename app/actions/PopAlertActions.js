@@ -1,5 +1,4 @@
 var alt = require('../alt');
-var PopAlertSource = require('../sources/PopAlertSource');
 
 class PopAlertActions {
 

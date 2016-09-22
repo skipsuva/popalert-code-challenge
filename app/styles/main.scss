@@ -17,6 +17,7 @@ $content-spacing: 16px;
 $light-grey: rgb(233, 237, 238);
 $light-grey-selected: rgb(247, 248, 249);
 $light-grey-outline: rgb(221, 222, 223);
+$light-grey-text: rgb(182, 183, 184);
 $dark-grey: rgb(32, 33, 34);
 $dark-grey-outline: rgb(42, 43, 44);
 $yellow: rgb(252, 230, 141);
@@ -161,7 +162,7 @@ body {
         cursor: pointer;
         padding: 8px 20px;
         background-color: $bone-white;
-        color: $dark-grey;
+        color: $light-grey-text;
         text-decoration: none;
         display: inline-block;
         position: relative;
@@ -171,13 +172,13 @@ body {
 
         &:hover {
           color: $dark-grey;
-          background-color: lighten($light-grey, 5%);
         }
 
       }
 
       .alert-toggle-button.selected {
         background-color: $light-grey-selected;
+        color: $dark-grey;
       }
 
       .alert-toggle-button + .alert-toggle-button {
