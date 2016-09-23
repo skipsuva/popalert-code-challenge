@@ -18,6 +18,10 @@ class PopAlertActions {
     return itemId;
   }
 
+  filterListByQuery(query) {
+    return query;
+  }
+
   openMenu() {
     return true;
   }

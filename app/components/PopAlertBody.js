@@ -4,12 +4,17 @@ var AlertList     = require('./AlertList.js');
 var PopAlertActions = require('../actions/PopAlertActions');
 
 var PopAlertBody = React.createClass({
+  onFilterListByQuery(query) {
+    PopAlertActions.filterListByQuery(query);
+  },
 
   render() {
     return(
       <div className="body-content">
         <div className="search-input-container">
-          <SearchInput />
+          <SearchInput
+            filterListByQuery={this.onFilterListByQuery}
+            />
         </div>
         <div className="alert-list-container">
           <AlertList

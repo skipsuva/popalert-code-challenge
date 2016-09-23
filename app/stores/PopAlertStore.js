@@ -12,6 +12,7 @@ class PopAlertStore {
       handleRemoveAlertItem: PopAlertActions.removeItem,
       handleEditAlertItem: PopAlertActions.editAlertItem,
       handleCancelEditAlertItem: PopAlertActions.cancelEditAlertItem,
+      handleFilterByQuery: PopAlertActions.filterListByQuery,
       handleOpenMenu: PopAlertActions.openMenu,
       handleCloseMenu: PopAlertActions.closeMenu,
       handleShowPopularAlerts: PopAlertActions.showPopularAlerts,
@@ -31,12 +32,16 @@ class PopAlertStore {
 
   handleEditAlertItem(itemId) {
     testData[itemId - 1].beingEdited = true;
-    // this.alertItems = this.fetchItems();
   }
 
   handleCancelEditAlertItem(itemId) {
     testData[itemId - 1].beingEdited = false;
-    // this.alertItems = this.fetchItems();
+  }
+
+  handleFilterByQuery(query) {
+    this.alertItems = this.alertItems.filter(function(item) {
+      return item.name.toLowerCase().includes(query);
+    });
   }
 
   handleOpenMenu() {
