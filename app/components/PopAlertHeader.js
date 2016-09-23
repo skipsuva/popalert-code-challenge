@@ -1,6 +1,6 @@
-var React = require('react');
-var Menu = require('./Menu.js');
-var PopAlertActions = require('../actions/PopAlertActions');
+import React from 'react';
+import Menu from './Menu.js';
+import PopAlertActions from '../actions/PopAlertActions';
 
 
 var PopAlertHeader = React.createClass({

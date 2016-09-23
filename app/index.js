@@ -1,10 +1,10 @@
-var React           = require('react');
-var ReactDOM        = require('react-dom');
-var AltContainer    = require('alt-container');
-var PopAlertStore   = require('./stores/PopAlertStore.js');
-var style           = require('./styles/main.scss');
-var PopAlertHeader  = require('./components/PopAlertHeader.js');
-var PopAlertBody    = require('./components/PopAlertBody.js');
+import React           from 'react';
+import ReactDOM        from 'react-dom';
+import AltContainer    from 'alt-container';
+import PopAlertStore   from './stores/PopAlertStore.js';
+import style           from './styles/main.scss';
+import PopAlertHeader  from './components/PopAlertHeader.js';
+import PopAlertBody    from './components/PopAlertBody.js';
 
 
 var PopAlertParent = React.createClass({

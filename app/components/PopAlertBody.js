@@ -1,7 +1,7 @@
-var React         = require('react');
-var SearchInput   = require('./SearchInput.js');
-var AlertList     = require('./AlertList.js');
-var PopAlertActions = require('../actions/PopAlertActions');
+import React         from 'react';
+import SearchInput   from './SearchInput.js';
+import AlertList     from './AlertList.js';
+import PopAlertActions from '../actions/PopAlertActions';
 
 var PopAlertBody = React.createClass({
   onFilterListByQuery(query) {

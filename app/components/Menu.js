@@ -1,10 +1,9 @@
-var React = require('react');
-var PopAlertActions = require('../actions/PopAlertActions');
+import React from 'react';
+import PopAlertActions from '../actions/PopAlertActions';
 
 var Menu = React.createClass({
 
   render(){
-
     return(
       <div className="menu-container">
         <div className="menu-item"> Privacy Policy </div>

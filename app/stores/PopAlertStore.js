@@ -1,5 +1,5 @@
-var alt = require('../alt');
-var PopAlertActions = require('../actions/PopAlertActions');
+import alt from '../alt';
+import PopAlertActions from '../actions/PopAlertActions';
 
 class PopAlertStore {
   constructor(){

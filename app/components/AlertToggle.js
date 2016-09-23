@@ -1,5 +1,5 @@
-var React = require('react');
-var PopAlertActions = require('../actions/PopAlertActions');
+import React from 'react';
+import PopAlertActions from '../actions/PopAlertActions';
 
 var AlertToggle = React.createClass({
   onPopularToggle() {

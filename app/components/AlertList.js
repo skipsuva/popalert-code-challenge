@@ -1,7 +1,7 @@
-var React = require('react');
-var AlertListItem = require('./AlertListItem.js');
-var AlertToggle = require('./AlertToggle.js');
-var PopAlertActions = require('../actions/PopAlertActions');
+import React from 'react';
+import AlertListItem from './AlertListItem.js';
+import AlertToggle from './AlertToggle.js';
+import PopAlertActions from '../actions/PopAlertActions';
 
 var AlertList = React.createClass({
 

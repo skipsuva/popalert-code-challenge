@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: "Walsheim Oblique";
   src: url("/vendor/assets/fonts/gt-walsheim-regular-oblique-web.woff");
@@ -12,8 +13,10 @@
   font-style: italic;
 }
 
+// Defeault spacing
 $content-spacing: 16px;
 
+// Colors
 $light-grey: rgb(233, 237, 238);
 $light-grey-selected: rgb(247, 248, 249);
 $light-grey-outline: rgb(221, 222, 223);
@@ -47,7 +50,6 @@ body {
     color: $bone-white;
     font-family: "Walsheim";
     margin: 0;
-    // float: cen;
     padding-top: $content-spacing;
     padding-bottom: $content-spacing;
   }
