@@ -57,7 +57,7 @@ body {
     display: inline-block;
     position: relative;
     white-space: nowrap;
-    margin-top: -($content-spacing * 3);
+    margin-top: -43px;
     padding-right: $content-spacing;
     transition: all .1s ease-in-out;
 
@@ -132,14 +132,15 @@ body {
       border-radius: 4px;
       padding: $content-spacing;
       width: 80%;
-      font-size: small;
+      font-family: inherit;
+      font-size: medium;
     }
 
     .search-svg {
-      // padding-right: $content-spacing;
-      display: inline-block;
-      position: relative;
-      white-space: nowrap;
+      position: relative;;
+      float: right;
+      top: $content-spacing;
+      right: 20px;;
     }
   }
 
@@ -161,14 +162,14 @@ body {
       .alert-toggle-button {
         border-radius: 5px 0px 0px 5px;
         cursor: pointer;
-        padding: 8px 20px;
+        padding: 8px 28px;
         background-color: $bone-white;
         color: $light-grey-text;
         text-decoration: none;
         display: inline-block;
         position: relative;
         white-space: nowrap;
-        font-size: x-small;
+        font-size: small;
         border: 1px solid $light-grey-outline;
 
         &:hover {
@@ -213,6 +214,7 @@ body {
         float: left;
         margin: 0;
         padding-top: 5px;
+        font-size: large;
       }
 
       .alert-item-button {

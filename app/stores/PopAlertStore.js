@@ -39,9 +39,10 @@ class PopAlertStore {
   }
 
   handleFilterByQuery(query) {
-    if(query==="") { this.alertItems = this.fetchItems();}
+    var sanitizedQuery = query.toLowerCase();
+    if(sanitizedQuery === "") { this.alertItems = this.fetchItems();}
     this.alertItems = this.fetchItems().filter(function(item) {
-      return item.name.toLowerCase().includes(query);
+      return item.name.toLowerCase().includes(sanitizedQuery);
     });
   }
 

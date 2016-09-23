@@ -10,12 +10,12 @@ var SearchInput = React.createClass({
   render() {
     return(
       <div className="">
-      <input
-        className="input"
-        placeholder="Find alerts"
-        type="text"
-        onChange={this.searchAlertList} />
-       <img className="search-svg" src="/vendor/assets/images/search-icon-01.svg " />
+        <input
+          className="input"
+          placeholder="Find alerts"
+          type="text"
+          onChange={this.searchAlertList} />
+         <img className="search-svg" src="/vendor/assets/images/search-icon-01.svg " />
       </div>
     );
   }
